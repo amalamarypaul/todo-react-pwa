@@ -1,12 +1,14 @@
-import React from "react";
-import { Menu } from "components";
+import React from 'react';
+import { Menu } from 'components';
 
-const Home =()=>{
+import './home.css';
+
+const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Menu />
     </div>
-  )
-}
+  );
+};
 
 export default Home;
