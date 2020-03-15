@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './item.css';
 
 const MenuItem = ({ icon, text }) => {
   return (
     <div className="item">
-      <p>{icon}</p>
+      <FontAwesomeIcon icon={icon} />
       <p className="itemText">{text}</p>
     </div>
   );

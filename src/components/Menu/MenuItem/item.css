@@ -1,14 +1,21 @@
 .item{
   flex-grow: 1;
   display: flex;
-  margin-left: 15px;
   color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 .itemText{
-  margin-left: 5px;
+  display: none;
+
 }
 @media only screen and (min-width: 680px) {
   .item{
     flex-grow: 0;
+  }
+  .itemText{
+    margin-left: 15px;
+    display:block;
   }
 }
