@@ -7,12 +7,7 @@
   align-items: center;
   background-color: #244680;
 }
-.item{
-  flex-grow: 1;
-  align-content: center;
-  margin-left: 20px;
-  color: white;
-}
+
 @media only screen and (min-width: 680px) {
   .menu{
     left:0px;
@@ -22,8 +17,5 @@
     align-items: flex-start;
     width: 20%;
     background-color: #244680;
-  }
-  .item{
-    flex-grow: 0;
   }
 }
