@@ -1,31 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import './home.css';
 import { Layout, Card } from 'components';
 
-const todos = [
-  {
-    id: 1,
-    title: 'Activity number 1',
-    addedDate: '16 Mar 2020',
-    isDone: false
-  },
-  {
-    id: 2,
-    title: 'Purchase vegetables',
-    addedDate: '16 Mar 2020',
-    isDone: false
-  },
-  {
-    id: 3,
-    title: 'Evening walk for 2 hrs',
-    addedDate: '16 Mar 2020',
-    isDone: true
-  }
-];
 
-const Home = ({ name }) => {
+const Home = ({ name,todos }) => {
   return (
     <Layout>
       <h1>{name}</h1>
@@ -48,6 +29,15 @@ const Home = ({ name }) => {
 };
 
 Home.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string,
+  todos:PropTypes.arrayOf(PropTypes.shape({
+    key:PropTypes.string,
+    title:PropTypes.string,
+    addedDate:PropTypes.string,
+    isDone:PropTypes.bool
+  }))
 };
-export default Home;
+
+const mapStateToProps=({todos})=>({todos});
+
+export default connect(mapStateToProps)(Home);

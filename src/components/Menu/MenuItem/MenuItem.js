@@ -17,7 +17,7 @@ const MenuItem = ({ icon, text, to }) => {
 };
 
 MenuItem.propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.object, //eslint-disable-line
   text: PropTypes.string,
   to: PropTypes.string
 };
