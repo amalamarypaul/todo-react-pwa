@@ -1,5 +1,5 @@
-import Menu from "./Menu";
+import Menu from './Menu';
+import Layout from './Layout';
+import Card from './Card';
 
-export {
-  Menu
-}
+export { Menu, Layout, Card };

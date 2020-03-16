@@ -8,13 +8,13 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          <Home name="home" />
+          <Home name="All" />
         </Route>
         <Route path="/active">
-          <Home name="active" />
+          <Home name="Active" />
         </Route>
         <Route path="/completed">
-          <Home name="completed" />
+          <Home name="Completed" />
         </Route>
       </Switch>
     </Router>
