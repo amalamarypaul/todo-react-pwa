@@ -5,16 +5,20 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  cursor: pointer;
 }
-.itemText{
+.item-text{
   display: none;
 
+}
+.link{
+  text-decoration: none;
 }
 @media only screen and (min-width: 680px) {
   .item{
     flex-grow: 0;
   }
-  .itemText{
+  .item-text{
     margin-left: 15px;
     display:block;
   }

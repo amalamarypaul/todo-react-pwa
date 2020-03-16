@@ -1,14 +1,18 @@
 import React from 'react';
-import { Menu } from 'components';
+import PropTypes from 'prop-types';
 
 import './home.css';
+import Layout from 'pages/Layout';
 
-const Home = () => {
+const Home = ({ name }) => {
   return (
-    <div className="home">
-      <Menu />
-    </div>
+    <Layout>
+      <h1>{name}</h1>
+    </Layout>
   );
 };
 
+Home.propTypes = {
+  name: PropTypes.string
+};
 export default Home;
