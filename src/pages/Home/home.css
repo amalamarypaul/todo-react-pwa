@@ -1,6 +1,18 @@
 .home{
   background-color: #c3d1e8;
   position:absolute;
-  /* height: 100%;
-  width: 100%; */
+  width: 100%;
+}
+.add-button{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid #c3d1e8;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-color: #244680;
 }

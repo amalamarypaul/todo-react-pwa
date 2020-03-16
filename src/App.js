@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Home } from 'pages';
+import { Home, AddTodo } from 'pages';
 
 function App() {
   return (
@@ -15,6 +15,9 @@ function App() {
         </Route>
         <Route path="/completed">
           <Home name="Completed" />
+        </Route>
+        <Route path="/create">
+          <AddTodo />
         </Route>
       </Switch>
     </Router>

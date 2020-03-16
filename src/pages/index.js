@@ -1,5 +1,4 @@
 import Home from './Home';
+import AddTodo from './AddTodo';
 
-export {
-  Home
-}
+export { Home, AddTodo };
