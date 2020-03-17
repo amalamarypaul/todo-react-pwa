@@ -14,14 +14,18 @@ const Home = ({ name, todos }) => {
         const { id, title, addedDate, isDone } = item;
         if (name === 'Active') {
           return (
-            !isDone && <Card title={title} addedDate={addedDate} key={id} />
+            !isDone && (
+              <Card title={title} addedDate={addedDate} key={id} id={id} />
+            )
           );
         } else if (name === 'Completed') {
           return (
-            isDone && <Card title={title} addedDate={addedDate} key={id} />
+            isDone && (
+              <Card title={title} addedDate={addedDate} key={id} id={id} />
+            )
           );
         } else {
-          return <Card title={title} addedDate={addedDate} key={id} />;
+          return <Card title={title} addedDate={addedDate} key={id} id={id} />;
         }
       })}
       <Link to="/create">
