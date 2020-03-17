@@ -10,38 +10,47 @@ const Home = ({ name, todos }) => {
   return (
     <Layout>
       <h1>{name}</h1>
-      {todos.map(item => {
-        const { id, title, addedDate, isDone } = item;
-        if (name === 'Active') {
-          return (
-            !isDone && (
-              <Card title={title} addedDate={addedDate} key={id} id={id} />
-            )
-          );
-        } else if (name === 'Completed') {
-          return (
-            isDone && (
+      <div className="home-content">
+        {todos.map(item => {
+          const { id, title, addedDate, isDone } = item;
+          if (name === 'Active') {
+            return (
+              !isDone && (
+                <Card
+                  title={title}
+                  addedDate={addedDate}
+                  key={id}
+                  id={id}
+                  isDone={isDone}
+                />
+              )
+            );
+          } else if (name === 'Completed') {
+            return (
+              isDone && (
+                <Card
+                  title={title}
+                  addedDate={addedDate}
+                  key={id}
+                  id={id}
+                  isDone
+                />
+              )
+            );
+          } else {
+            return (
               <Card
                 title={title}
                 addedDate={addedDate}
                 key={id}
                 id={id}
-                isDone
+                isDone={isDone}
               />
-            )
-          );
-        } else {
-          return (
-            <Card
-              title={title}
-              addedDate={addedDate}
-              key={id}
-              id={id}
-              isDone={isDone}
-            />
-          );
-        }
-      })}
+            );
+          }
+        })}
+      </div>
+
       <Link to="/create">
         <button className="add-button">
           <p>Add</p>

@@ -35,6 +35,7 @@ const AddTodo = ({ addTodos }) => {
         className="input"
         value={todo}
         onChange={handleChange}
+        maxLength={80}
       />
       <button className="submit-button" onClick={onSubmit}>
         Add Todo

@@ -16,3 +16,7 @@
   text-align: center;
   background-color: #244680;
 }
+.home-content{
+  height: 90%;
+  overflow-y: scroll;
+}
