@@ -21,11 +21,25 @@ const Home = ({ name, todos }) => {
         } else if (name === 'Completed') {
           return (
             isDone && (
-              <Card title={title} addedDate={addedDate} key={id} id={id} />
+              <Card
+                title={title}
+                addedDate={addedDate}
+                key={id}
+                id={id}
+                isDone
+              />
             )
           );
         } else {
-          return <Card title={title} addedDate={addedDate} key={id} id={id} />;
+          return (
+            <Card
+              title={title}
+              addedDate={addedDate}
+              key={id}
+              id={id}
+              isDone={isDone}
+            />
+          );
         }
       })}
       <Link to="/create">
