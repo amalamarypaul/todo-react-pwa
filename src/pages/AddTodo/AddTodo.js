@@ -15,8 +15,8 @@ const AddTodo = ({ addTodos }) => {
   }
   function onSubmit() {
     const today = new Date();
-    const addedDate = `${today.getDate()}/${today.getMonth() +
-      1}/${today.getFullYear()}`;
+    const month = today.toLocaleString('default', { month: 'short' });
+    const addedDate = `${today.getDate()} ${month} ${today.getFullYear()}`;
     addTodos({
       id: Math.random()
         .toString(36)
