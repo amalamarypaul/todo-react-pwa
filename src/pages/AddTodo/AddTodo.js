@@ -44,6 +44,6 @@ const AddTodo = ({ addTodos }) => {
 };
 
 AddTodo.propTypes = {
-  addTodos: PropTypes.function
+  addTodos: PropTypes.func
 };
 export default connect(null, { addTodos })(AddTodo);
