@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 import { deleteTodo, updateTodo } from 'store/todos';
+import './card.css';
+import { CheckBox } from 'components';
 
 const Card = ({ title, addedDate, id, deleteTodo, updateTodo, isDone }) => {
   function onDelete() {
@@ -14,11 +16,15 @@ const Card = ({ title, addedDate, id, deleteTodo, updateTodo, isDone }) => {
     updateTodo(id);
   }
   return (
-    <div>
-      <h3>{title}</h3>
-      <p>{addedDate}</p>
-      {!isDone && <input type="checkbox" onClick={markAsDone} />}
-      <FontAwesomeIcon icon={faTrash} onClick={onDelete} />
+    <div className="card-container">
+      <p id="card-todo">{title}</p>
+      <CheckBox
+        onClick={markAsDone}
+        checked={isDone}
+        className="card-checkbox"
+      />
+      <FontAwesomeIcon id="card-trash" icon={faTrash} onClick={onDelete} />
+      <p id="card-date">{addedDate}</p>
     </div>
   );
 };

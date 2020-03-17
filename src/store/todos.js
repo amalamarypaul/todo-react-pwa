@@ -16,7 +16,8 @@ export default (state = initialState, { type, payload }) => {
       let updatedList = [];
       state.forEach(item => {
         if (item.id === payload) {
-          updatedList.push({ ...item, isDone: true });
+          const checkValue = item.isDone;
+          updatedList.push({ ...item, isDone: !checkValue });
         } else {
           updatedList.push(item);
         }
