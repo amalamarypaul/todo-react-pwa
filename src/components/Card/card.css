@@ -25,3 +25,10 @@
   right: 30px;
   top:10px;
 }
+
+@media only screen and (min-width:680px) {
+  .card-container{
+    width: 20%;
+    height: 150px;
+  }
+}
