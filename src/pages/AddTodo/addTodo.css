@@ -10,7 +10,7 @@
   box-shadow: 4px 5px 3px rgba(0,0,0,.2);
 }
 .input{
-  width: 95%;
+  width: 93%;
   height: 10%;
   margin-bottom: 1%;
   margin-top: 10%;
@@ -20,4 +20,25 @@
   margin-top: 5px;
   height: 14px;
   color: red;
+}
+
+
+@media only screen and (orientation:landscape) {
+  .submit-button{
+    height: 15%;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-aspect-ratio:6/1) {
+  .submit-button{
+    height: 50%;
+    font-size: 14px;
+  }
+  .input{
+    margin-top: 1%
+  }
+  .add-todo-error{
+    margin-top: 1%;
+    height: 14px;
+  }
 }

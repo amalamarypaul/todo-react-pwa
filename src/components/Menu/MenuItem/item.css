@@ -14,7 +14,7 @@
 .link{
   text-decoration: none;
 }
-@media only screen and (min-width: 680px) {
+@media only screen and (min-width: 600px) {
   .item{
     flex-grow: 0;
   }

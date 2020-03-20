@@ -12,11 +12,24 @@ width: 99%;
 height: 95%;
 }
 
-@media only screen and (min-width: 680px) {
+@media only screen and (min-width: 600px) {
   .sub-container{
     position: absolute;
     left: 20%;
     width: 79%;
     height: 99%;
+  }
+}
+
+@media only screen and (orientation:landscape) {
+
+}
+@media only screen and (min-aspect-ratio:6/1) {
+  .container{
+    overflow-y: scroll;
+  }
+  .sub-container{
+      height: 99%;
+      overflow-y: scroll;
   }
 }
